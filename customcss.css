@@ -1,0 +1,40 @@
+}
+p {background-color: rgb(238, 163, 225);
+    color: red;
+    text-align: center;
+    font-family: 'Papyrus';
+    text-shadow: 2px 2px lightpink
+}
+h1, h2{
+    color: rgba(66, 76, 209, 0.753);font-size: 50px;
+    font-family: "papyrus";
+    text-align: center;
+    text-shadow: 2px 2px lightgrey;
+    
+}
+
+body {
+    color: #ffffff ;
+    background-color: rgb(0, 0, 0)
+
+}
+div.photo1 {border:rgb(255, 0, 0); 
+    border-width: 30px;
+    border-style: dotted;
+    color: rgb(26, 129, 98);
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 5px;
+    text-align: right;
+    padding-right: 0%;
+    
+}
+
+
+.list {
+    border-style:dashed; color: brown;
+}
+
+
+
