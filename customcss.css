@@ -63,9 +63,6 @@ div.photo1 {
     text-decoration: none;
 }
 .dropdown{ 
-    float: center;
-    overflow: hidden;
-    position: relative;
     background-color: rgb(168, 138, 216);
     border-radius: 15px 20px 8px 8px;
 }
@@ -87,15 +84,16 @@ div.photo1 {
     background-color:rgb(183, 250, 250);
     overflow:hidden;
 }
+.classmates {
+    display:none;
+    position: absolute;
+    background-color:rgb(165, 135, 210);
+}
 .dropdown:hover .classmates{
     display:block;
 }
 .dropdown:hover .dropbtn {
     background-color:rgb(252, 156, 67);
-}
-.classmates {
-    display:none;
-    position: absolute;
 }
 #ass {text-align: left;
 }
