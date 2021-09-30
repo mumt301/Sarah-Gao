@@ -23,7 +23,7 @@ h2 {
 }
 
 p { 
-    background-color: rgb(251, 216, 252);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Papyrus';
@@ -45,24 +45,14 @@ div.photo1 {
     float: right; 
     margin-left: 50px;
 }
-div.firstp { border:rgb(0, 0, 0); 
-    border-width: 20px;
-    width: 50%;
-    color: rgb(26, 129, 98);
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 10px;
-    align-content: stretch;
-    padding-right: 0%;
-    float: left; 
-    margin-left: 5px;
-}
+
 .list {
     color: brown;
 }
 .navbar {
     overflow: hidden;
     background-color: rgb(168, 138, 216);
+    border-radius: 15px 20px 8px 8px;
 }
 .navbar a{
     float: left;
@@ -73,9 +63,11 @@ div.firstp { border:rgb(0, 0, 0);
     text-decoration: none;
 }
 .dropdown{ 
-    float: left;
+    float: center;
     overflow: hidden;
-
+    position: relative;
+    background-color: rgb(168, 138, 216);
+    border-radius: 15px 20px 8px 8px;
 }
 .dropdown .dropbtn {
     font-size: 16px;
@@ -89,15 +81,26 @@ div.firstp { border:rgb(0, 0, 0);
 }
 .navbar a:hover, .dropdown:hover
 .dropbtn {
-    background-color: rgb(4, 4, 8);
+    background-color: rgb(255, 0, 0);
 }
 .classmates a:hover {
-    background-color:teal;
+    background-color:rgb(183, 250, 250);
+    overflow:hidden;
 }
 .dropdown:hover .classmates{
     display:block;
 }
+.dropdown:hover .dropbtn {
+    background-color:rgb(252, 156, 67);
+}
+.classmates {
+    display:none;
+    position: absolute;
+}
 #ass {text-align: left;
+}
+#assignmentbt:hover {
+    background-color:red;    
 }
 #bf {
     height:50%; 
@@ -106,17 +109,6 @@ div.firstp { border:rgb(0, 0, 0);
 }
 #enjoy {
     color:rgb(0, 0, 0);
-}
-#SarahGao{ 
-    box-shadow:rgba(0, 0, 0, 0.19);
-    padding-right: 20%;
-    padding-left: 5%;
-    margin-top: 50px;
-    width: 80%;
-    height: 70%;
-    background-color: rgb(168, 138, 216);
-    color: white;
-    text-align:left;
 }
 #polaroidtxt{
     background-color: white;

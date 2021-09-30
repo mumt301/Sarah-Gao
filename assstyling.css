@@ -1,13 +1,13 @@
 body{
-    background-color: thistle;
+    background-color: rgb(194, 253, 255);
 
 }
 h1 {
-    color: rgba(66, 76, 209, 0.753);
+    color: rgba(0, 0, 0, 0.753);
     font-size: 50px;
     font-family: "papyrus";
     text-align: center;
-    text-shadow: 2px 2px lightgrey; 
+    text-shadow: 2px 0px rgb(252, 162, 162); 
     border-radius: 50%;
     padding: 10px; border 2px; color: solid red;
 
@@ -15,11 +15,7 @@ h1 {
 .navbar {
     overflow: hidden;
     background-color: #333;
-  }
-.navbar:hover{
-    background-color: violet;
-}
-  
+  }  
 .navbar a {
     float: left;
     font-size: 16px;
@@ -27,3 +23,19 @@ h1 {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: "papyrus";
+}
+#questionnaire a:hover {
+    background-color:rgb(253, 15, 15);
+}
+#index a:hover {
+    background-color:rgb(255, 138, 4);
+}
+#kenny a:hover{
+    background-color:rgb(238, 224, 31);
+}
+#home a:hover {
+    background-color:rgb(133, 255, 102);
+    float: right;
+    position:right;
+}
