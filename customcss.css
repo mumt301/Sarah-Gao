@@ -3,19 +3,30 @@ body {
     color: #718ff1 ;
     background-color: rgb(251, 216, 252);
 }
-h1, h2 {
+h1 {
     color: rgba(66, 76, 209, 0.753);
     font-size: 50px;
     font-family: "papyrus";
     text-align: center;
     text-shadow: 2px 2px lightgrey; 
+    border-radius: 50%;
+    padding: 10px; border 2px; color: solid red;
 }
+h2 {
+    color: rgba(66, 76, 209, 0.753);
+    font-size: 50px;
+    font-family: "papyrus";
+    text-align: center;
+    text-shadow: 2px 2px lightgrey; 
+    border-radius: 50%;
+    padding: 10px; border 2px; color: solid red;
+}
+
 p { 
     background-color: rgb(251, 216, 252);
-    color: red;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Papyrus';
-    text-shadow: 2px 2px lightpink
 }
 div.container {    
     text-align: center;
@@ -34,9 +45,57 @@ div.photo1 {
     float: right; 
     margin-left: 50px;
 }
+div.firstp { border:rgb(0, 0, 0); 
+    border-width: 20px;
+    width: 50%;
+    color: rgb(26, 129, 98);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    align-content: stretch;
+    padding-right: 0%;
+    float: left; 
+    margin-left: 5px;
+}
 .list {
-    border-style:dashed; 
     color: brown;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgb(168, 138, 216);
+}
+.navbar a{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown{ 
+    float: left;
+    overflow: hidden;
+
+}
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inhereit;
+    margin: 0;
+}
+.navbar a:hover, .dropdown:hover
+.dropbtn {
+    background-color: rgb(4, 4, 8);
+}
+.classmates a:hover {
+    background-color:teal;
+}
+.dropdown:hover .classmates{
+    display:block;
 }
 #ass {text-align: left;
 }
@@ -49,12 +108,21 @@ div.photo1 {
     color:rgb(0, 0, 0);
 }
 #SarahGao{ 
-    border-style: solid; 
     box-shadow:rgba(0, 0, 0, 0.19);
-    padding-right: 0%;
-    width: 50%;
+    padding-right: 20%;
+    padding-left: 5%;
+    margin-top: 50px;
+    width: 80%;
+    height: 70%;
+    background-color: rgb(168, 138, 216);
+    color: white;
+    text-align:left;
 }
 #polaroidtxt{
     background-color: white;
     color: black;
+    text-shadow:rgb(161, 161, 159);
+}
+#youtubelink {
+    background-color: rgb(165, 135, 210);
 }

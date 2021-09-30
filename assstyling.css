@@ -1,0 +1,29 @@
+body{
+    background-color: thistle;
+
+}
+h1 {
+    color: rgba(66, 76, 209, 0.753);
+    font-size: 50px;
+    font-family: "papyrus";
+    text-align: center;
+    text-shadow: 2px 2px lightgrey; 
+    border-radius: 50%;
+    padding: 10px; border 2px; color: solid red;
+
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+.navbar:hover{
+    background-color: violet;
+}
+  
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
