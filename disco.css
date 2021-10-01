@@ -12,8 +12,17 @@ h1 {
     padding: 10px; border 2px; color: solid rgb(136, 123, 123);
     border-color:black;
 }
+p{
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+.albumcovers{
+    opacity: 0.85;
+    background-color: black;
+}
 .class {
-    float: left;
+    float: center;
     padding: 0 10px 10px 0;
     margin-top: 1.8%;
     border-radius: 5px 5px 5px 5px;
@@ -51,9 +60,6 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
     font-family: "papyrus";
-}
-.albumcovers{
-    opacity: 0.85;
 }
 #album1 {
     width: 20%;
