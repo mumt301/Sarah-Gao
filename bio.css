@@ -1,5 +1,5 @@
 body{
-    background-image: url(kney.jpg)
+    background-image: url(bio.jpg)
 }
 h1 {
     color: rgba(255, 0, 0, 0.753);
@@ -11,6 +11,20 @@ h1 {
     padding: 10px; border 2px; color: solid rgb(136, 123, 123);
     border-color:black;
     background-color: black;
+}
+.class {
+    float: left;
+    padding: 0 10px 10px 0;
+    margin-top: 1.8%;
+    border-radius: 5px 5px 5px 5px;
+}
+.class2 {
+    float: right;
+    padding: 15px 25px 20px 20px;
+    margin-top: 1.8%;
+    border-radius: 10px 10px 10px 10px;
+    width: 25%;
+    height: 50%;
 }
 .navbar {
     overflow: hidden;
@@ -25,17 +39,22 @@ h1 {
     text-decoration: none;
     font-family: "papyrus";
 }
-#biography a:hover {
+#Bio {
+    background-color: cornsilk;
+    border-radius: 5px 5px 5px 5px;
+    padding: 15px 15px 15px 15px;
+} 
+#main a:hover {
     background-color:rgb(253, 15, 15);
 }
 #disco a:hover {
-    background-color:rgb(51, 40, 40);
+    background-color:rgb(255, 0, 0);
 }
 #musicpg a:hover{
     background-color:rgb(255, 0, 0);
 }
 #home a:hover {
-    background-color:rgb(51, 44, 44);
+    background-color:rgb(255, 0, 0);
     float: right;
     position:right;
 }
