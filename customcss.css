@@ -1,4 +1,3 @@
-
 body {
     color: #718ff1 ;
     background-color: rgb(251, 216, 252);
@@ -21,9 +20,9 @@ h2 {
     border-radius: 50%;
     padding: 10px; border 2px; color: solid red;
 }
-
 p { 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(251, 216, 252);
+    box-shadow: grey;
     color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Papyrus';
@@ -80,6 +79,7 @@ div.photo1 {
 .dropbtn {
     background-color: rgb(255, 0, 0);
 }
+/*Formatting for Classmates button (next two lines)*/
 .classmates a:hover {
     background-color:rgb(183, 250, 250);
     overflow:hidden;
@@ -113,6 +113,7 @@ div.photo1 {
     color: black;
     text-shadow:rgb(161, 161, 159);
 }
+
 #youtubelink {
     background-color: rgb(165, 135, 210);
 }
