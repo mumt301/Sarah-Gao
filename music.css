@@ -28,13 +28,13 @@ h1 {
 .video {
     margin: 10px 10px 10px 10px;
 }
-#biography a:hover {
-    background-color:rgb(253, 15, 15);
+#main a:hover {
+    background-color:rgb(255, 0, 0);
 }
 #disco a:hover {
-    background-color:rgb(51, 40, 40);
+    background-color:rgb(255, 0, 0);
 }
-#musicpg a:hover{
+#bio a:hover{
     background-color:rgb(255, 0, 0);
 }
 #home a:hover {

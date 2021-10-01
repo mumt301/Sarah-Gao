@@ -29,13 +29,13 @@ h1 {
     background-color:rgb(253, 15, 15);
 }
 #disco a:hover {
-    background-color:rgb(51, 40, 40);
+    background-color:rgb(255, 0, 0);
 }
 #musicpg a:hover{
     background-color:rgb(255, 0, 0);
 }
 #home a:hover {
-    background-color:rgb(51, 44, 44);
+    background-color:rgb(255, 0, 0);
     float: right;
     position:right;
 }
