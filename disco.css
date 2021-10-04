@@ -64,16 +64,22 @@ p{
 #album1 {
     width: 20%;
 }
+#allmusic a:hover {
+    background-color: red;
+}
 #Bio {
     background-color: cornsilk;
     border-radius: 5px 5px 5px 5px;
     padding: 15px 15px 15px 15px;
 } 
+#biography a:hover {
+    background-color:rgb(255, 0, 0);
+}
 #main a:hover {
     background-color:rgb(253, 15, 15);
 }
-#biography a:hover {
-    background-color:rgb(255, 0, 0);
+#musicbrainz a:hover{
+    background-color: red;
 }
 #musicpg a:hover{
     background-color:rgb(255, 0, 0);
@@ -82,4 +88,7 @@ p{
     background-color:rgb(255, 0, 0);
     float: right;
     position:right;
+}
+#wiki a:hover {
+    background-color: red;
 }
