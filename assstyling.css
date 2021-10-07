@@ -34,8 +34,11 @@ h1 {
 #kenny a:hover{
     background-color:rgb(238, 224, 31);
 }
+#table a:hover {
+    background-color: rgb(0, 255, 0);
+}
 #home a:hover {
-    background-color:rgb(133, 255, 102);
+    background-color:rgb(0, 60, 255);
     float: right;
     position:right;
 }
