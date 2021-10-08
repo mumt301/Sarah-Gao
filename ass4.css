@@ -1,6 +1,6 @@
-body {background-color: rgb(253, 216, 245);}
+body {background-color: rgb(225, 253, 255);}
 
-h1 {color:rgb(0, 38, 255); font-size: 60px; text-align: center; text-shadow:2px 2px lightgrey;}
+h1 {background-color: rgb(255, 255, 255); color:rgb(0, 0, 0); font-size: 60px; text-align: center; text-shadow:2px 2px rgb(102, 65, 65);}
 
 table {font-family: 'Arial'; border-collapse: collapse; width: 100%;}
-td, th {border: 1px solid #000000; text-align: left; padding: 8px; color:rgb(0, 0, 0);}
+td, th {border: 1px solid #000000; text-align: center; padding: 8px; color:rgb(0, 0, 0);}
