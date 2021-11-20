@@ -1,0 +1,14 @@
+body{
+    background-image: url(delicatepic.jpg);
+
+}
+h1 {
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 30px;
+    font-family: "papyrus";
+    text-align: left;
+    text-shadow: 2px 0px rgb(252, 162, 162); 
+    
+}
+
+
