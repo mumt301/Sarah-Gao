@@ -37,8 +37,11 @@ h1 {
 #table a:hover {
     background-color: rgb(0, 255, 0);
 }
+#table2 a:hover {
+    background-color: rgb(46, 76, 209);
+}
 #home a:hover {
-    background-color:rgb(0, 60, 255);
+    background-color:rgb(78, 24, 165);
     float: right;
     position:right;
 }
