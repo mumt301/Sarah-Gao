@@ -1,27 +1,13 @@
 "use strict";
 
-let urlParameters=(new URL(document.location)).searchParams;
-if (urlParameters.has('oscillator')) {
-    let oscillatorType=urlParameters.get('oscillator');
-}
-
-if (urlParameters.has('semitones')) {
-    let semitonesType=parseInt(urlParameters.get('semitones'));
-}
-if (urlParameters.has('minfreq')) {
-    let minfreqType=parseInt(urlParameters.get('minfreq'));
-}
-if (urlParameters.has('maxfreq')) {
-    let minfreqType=parseInt(urlParameters.get('maxfreq'));
-}
 
 // Turn theremin on
-function thereminOn(oscillator) {
-    oscillator.play();
+function thereminOn(oscillator, oscillator2) {
+    oscillator.play(); oscillator2.play();
 
 }
 // Control the theremin
-function thereminControl(e, oscillator, theremin) {
+function thereminControl(e, oscillator, oscillator2, theremin) {
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
@@ -37,87 +23,73 @@ function thereminControl(e, oscillator, theremin) {
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
 
-    oscillator2.frequency=interval(thereminFreq, semitones);
-    oscillator2.frequency=oscillator(thereminFreq, 4);
+//    oscillator2.frequency=interval(thereminFreq, semitones);
+ //   oscillator2.frequency=oscillator(thereminFreq, 4);
     
 }
 
 // Turn theremin off
-function thereminOff(oscillator) {
-    oscillator.stop();
+function thereminOff(oscillator, oscillator2) {
+    oscillator.stop(); oscillator2.stop();
 }
 
 function runAfterLoadingPage() {
     // Instantiate a sine wave with pizzicato.js
+    let urlParameters=(new URL(document.location)).searchParams;
+    let oscillatorType="sine";
+    if (urlParameters.has('oscillator')) {
+       oscillatorType=urlParameters.get('oscillator');
+    }
+    let semitonesType=0;
+    if (urlParameters.has('semitones')) {
+        semitonesType=parseInt(urlParameters.get('semitones'));
+    }
+    let minfreqType=220;
+    if (urlParameters.has('minfreq')) {
+        minfreqType=parseInt(urlParameters.get('minfreq'));
+    }
+    let maxfreqType=440;
+    if (urlParameters.has('maxfreq')) {
+        maxfreqType=parseInt(urlParameters.get('maxfreq'));
+    }
+
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: "sine",
+            type: oscillatorType,
             frequency: 220
-        };
+        }
 
-        function runAfterLoadingPage() {
-            // Instantiate a sine wave with pizzicato.js
-            const oscillator2 = new Pizzicato.Sound({
-                source: 'wave',
-                options: {
-                    type: "sine",
-                    frequency: 220
-                }
     });
 
-//Return note name
-let notenames = {
-    0: "C",
-    1: "C#",
-    2: "D",
-    3: "Eb",
-    4: "E",
-    5: "F",
-    6: "F#",
-    7: "G",
-    8: "Ab",
-    9: "A",
-    10: "Bb",
-    11: "B"
-}
-function noteFromFrequency(frequency, withOctave=false) {
-    const midinumber = midiFromFrequency(frequency);
-    const pitchclass = midinumber % 12;
-    let octave = (midinumber - pitchclass) / 12;
-    let notename = notenames[pitchclass];
-    if (withOctave) {
-        octave--;
-        notename += octave;
-    }
-    return notename;
-}
+    const oscillator2 = new Pizzicato.Sound({
+        source: 'wave',
+        options: {
+            type: oscillatorType,
+            frequency: 220
+        }         
+        
+    });
 
-//Return Frequency
-function interval(frequency, semitones) {
-    // Assuming equal temperament
-    return frequency * Math.pow(2, semitones / 12);
-}
-
-
+   
     // Get the theremin div from the html
     const theremin = document.getElementById("thereminZone");
 
     // Theremin plays when the mouse enters the theremin div
     theremin.addEventListener("mouseenter", function (e) {
-        thereminOn(oscillator);
+        thereminOn(oscillator, oscillator2);
     });
 
     // Theremin is controlled while the mouse is inside the theremin div
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, theremin);
+        thereminControl(e, oscillator, oscillator2, theremin);
     });
 
     // Theremin stops when the mouse leaves the theremin div
     theremin.addEventListener("mouseleave", function () {
-        thereminOff(oscillator);
+        thereminOff(oscillator, oscillator2);
     });
 }
 
 
-window.onload = runAfterLoadingPage;
+window.onload = runAfterLoadMcingPage;
