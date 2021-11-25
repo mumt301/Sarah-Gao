@@ -7,24 +7,24 @@ function thereminOn(oscillator, oscillator2) {
 
 }
 // Control the theremin
-function thereminControl(e, oscillator, oscillator2, theremin) {
+function thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, note, freqrange) {
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
 
-    let minFrequency = 220.0;
-    let maxFrequency = 880.0;
-    let freqRange = maxFrequency - minFrequency;
-    let thereminFreq = minFrequency + (x / theremin.clientWidth) * freqRange;
+    let freqRange = maxfreqType - minfreqType;
+    let thereminFreq = minfreqType + (x / theremin.clientWidth) * freqRange;
     let thereminVolume = 1.0 - (y / theremin.clientHeight);
+ 
 
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
 
-//    oscillator2.frequency=interval(thereminFreq, semitones);
- //   oscillator2.frequency=oscillator(thereminFreq, 4);
+    oscillator2.frequency=interval(thereminFreq, semitonesType);
+    note.innerHTML = "Note Frequency information " + (thereminFreq);
+    freqrange.innerHTML = "Frequency Range " + (freqRange);
     
 }
 
@@ -59,6 +59,7 @@ function runAfterLoadingPage() {
             type: oscillatorType,
             frequency: 220
         }
+//Do interval stuff
 
     });
 
@@ -74,15 +75,18 @@ function runAfterLoadingPage() {
    
     // Get the theremin div from the html
     const theremin = document.getElementById("thereminZone");
+    const note = document.getElementById("notefrequency")
+    const freqrange = document.getElementById("freqrange");
 
     // Theremin plays when the mouse enters the theremin div
     theremin.addEventListener("mouseenter", function (e) {
-        thereminOn(oscillator, oscillator2);
+        thereminOn(oscillator, oscillator2,);
     });
 
     // Theremin is controlled while the mouse is inside the theremin div
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, oscillator2, theremin);
+        thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, note, freqrange);
+
     });
 
     // Theremin stops when the mouse leaves the theremin div
@@ -91,5 +95,4 @@ function runAfterLoadingPage() {
     });
 }
 
-
-window.onload = runAfterLoadMcingPage;
+window.onload = runAfterLoadingPage;
