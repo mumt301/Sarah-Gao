@@ -6,16 +6,15 @@ function thereminOn(oscillator, oscillator2) {
     oscillator.play(); oscillator2.play();
 
 }
-// Control the theremin
-function thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, note, freqrange) {
+// Control the theremin (Had note2 in bottom bracket before as well)
+function thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, notename, freqrange) {
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
 
     let freqRange = maxfreqType - minfreqType;
     let thereminFreq = minfreqType + (x / theremin.clientWidth) * freqRange;
-    let thereminVolume = 1.0 - (y / theremin.clientHeight);
- 
+    let thereminVolume = 1.0 - (y / theremin.clientHeight); 
 
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
@@ -23,7 +22,8 @@ function thereminControl(e, oscillator, oscillator2, theremin, semitonesType, mi
     oscillator.volume = thereminVolume;
 
     oscillator2.frequency=interval(thereminFreq, semitonesType);
-    note.innerHTML = "Note Frequency information " + (thereminFreq);
+    notefrequency.innerHTML = "Note Frequency Oscillator 1 " + (thereminFreq);
+    notename.innerHTML = "Note Name Oscillator 1 " + noteFromFrequency(thereminFreq);
     freqrange.innerHTML = "Frequency Range " + (freqRange);
     
 }
@@ -52,14 +52,15 @@ function runAfterLoadingPage() {
     if (urlParameters.has('maxfreq')) {
         maxfreqType=parseInt(urlParameters.get('maxfreq'));
     }
+    const notename = document.getElementById("notename");
 
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
             type: oscillatorType,
             frequency: 220
+            
         }
-//Do interval stuff
 
     });
 
@@ -69,13 +70,17 @@ function runAfterLoadingPage() {
             type: oscillatorType,
             frequency: 220
         }         
-        
+       
     });
+
+    // and notename info
+
 
    
     // Get the theremin div from the html
     const theremin = document.getElementById("thereminZone");
-    const note = document.getElementById("notefrequency")
+    const note = document.getElementById("notefrequency");
+    //const note2 = document.getElementById("notefrequency2");
     const freqrange = document.getElementById("freqrange");
 
     // Theremin plays when the mouse enters the theremin div
@@ -85,7 +90,7 @@ function runAfterLoadingPage() {
 
     // Theremin is controlled while the mouse is inside the theremin div
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, note, freqrange);
+        thereminControl(e, oscillator, oscillator2, theremin, semitonesType, minfreqType, maxfreqType, notename, freqrange);
 
     });
 
